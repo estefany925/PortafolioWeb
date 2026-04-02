@@ -1,214 +1,376 @@
 <!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portafolio | Estefany Palacios</title>
-
-<script src="https://cdn.tailwindcss.com"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<script src="https://unpkg.com/lucide@latest"></script>
-
-<script>
-tailwind.config = {
-theme: {
-extend: {
-fontFamily: { sans: ['Inter', 'sans-serif'] },
-colors: {
-primary: '#2563eb',
-secondary: '#1e40af'
-}
-}
-}
-}
-</script>
-
-<style>
-body { font-family: 'Inter', sans-serif; }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio | Estefany Palacios</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#2563eb', // Blue 600
+                        secondary: '#1e40af', // Blue 800
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
 </head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-primary selection:text-white">
 
-<body class="bg-slate-50 text-slate-800">
+    <!-- Navbar -->
+    <nav class="fixed w-full bg-white/90 backdrop-blur-md shadow-sm z-50 transition-all duration-300">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <a href="#" class="text-xl font-bold text-primary tracking-tight">EP<span class="text-slate-800">.</span></a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#inicio" class="text-slate-600 hover:text-primary transition-colors px-3 py-2 rounded-md text-sm font-medium">Inicio</a>
+                        <a href="#perfil" class="text-slate-600 hover:text-primary transition-colors px-3 py-2 rounded-md text-sm font-medium">Perfil</a>
+                        <a href="#experiencia" class="text-slate-600 hover:text-primary transition-colors px-3 py-2 rounded-md text-sm font-medium">Experiencia</a>
+                        <a href="#educacion" class="text-slate-600 hover:text-primary transition-colors px-3 py-2 rounded-md text-sm font-medium">Educación</a>
+                        <a href="#habilidades" class="text-slate-600 hover:text-primary transition-colors px-3 py-2 rounded-md text-sm font-medium">Habilidades</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
 
-<!-- NAVBAR -->
-<nav class="fixed w-full bg-white/90 backdrop-blur shadow z-50">
-<div class="max-w-6xl mx-auto flex justify-between items-center h-16 px-4">
-<h1 class="font-bold text-primary">EP.</h1>
-<div class="hidden md:flex gap-6">
-<a href="#inicio">Inicio</a>
-<a href="#perfil">Perfil</a>
-<a href="#experiencia">Experiencia</a>
-<a href="#proyectos">Proyectos</a>
-<a href="#habilidades">Habilidades</a>
-</div>
-</div>
-</nav>
+    <!-- Hero Section (Inicio) -->
+    <section id="inicio" class="pt-32 pb-20 md:pt-40 md:pb-28 px-4 bg-gradient-to-br from-white to-slate-100">
+        <div class="max-w-6xl mx-auto flex flex-col items-center text-center">
+            <!-- Iniciales como avatar temporal -->
+            <img src="carnet.jpeg" alt="Foto Estefany"
+            class="w-32 h-32 rounded-full object-cover mx-auto mb-6 shadow-xl border-4 border-white">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight mb-4">
+                Estefany Rosario <br class="hidden md:block" />
+                <span class="text-primary">Palacios Manrique</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-slate-600 font-medium mb-8 max-w-3xl">
+                Estudiante de Ingeniería de Sistemas | Soporte de TI | Especialista en Datos
+            </p>
+            
+            <div class="flex flex-wrap justify-center gap-4 text-sm md:text-base text-slate-600 mb-10">
+                <div class="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm border border-slate-200">
+                    <i data-lucide="mail" class="w-4 h-4 text-primary"></i>
+                    <a href="mailto:estefanypalaciosmanrique9@gmail.com" class="hover:text-primary transition">estefanypalacios9@outlook.com</a>
+                </div>
+                <div class="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm border border-slate-200">
+                    <i data-lucide="phone" class="w-4 h-4 text-primary"></i>
+                    <span>970 666 304</span>
+                </div>
+                <div class="flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm border border-slate-200">
+                    <i data-lucide="map-pin" class="w-4 h-4 text-primary"></i>
+                    <span>Chorrillos, Lima - Perú</span>
+                </div>
+            </div>
 
-<!-- HERO -->
-<section id="inicio" class="pt-32 pb-20 text-center">
-<div class="max-w-5xl mx-auto">
+            <div class="flex gap-4">
+                <a href="cv-estefany.pdf" download class="bg-primary hover:bg-secondary text-white px-8 py-3 rounded-full font-medium transition-colors shadow-lg shadow-primary/30 flex items-center gap-2">
+                <i data-lucide="download" class="w-4 h-4"></i> Descargar CV
+               </a>
+                <a href="#experiencia" class="bg-white hover:bg-slate-50 text-slate-700 border border-slate-200 px-8 py-3 rounded-full font-medium transition-colors shadow-sm">
+                    Ver trayectoria
+                </a>
+            </div>
+        </div>
+    </section>
 
-<img src="carnet.jpeg" alt="Foto Estefany"
-class="w-32 h-32 rounded-full object-cover mx-auto mb-6 shadow-xl border-4 border-white hover:scale-105 transition">
+    <!-- Perfil Section -->
+    <section id="perfil" class="py-20 px-4">
+        <div class="max-w-4xl mx-auto">
+            <div class="flex items-center gap-3 mb-8">
+                <div class="p-3 bg-primary/10 rounded-lg text-primary">
+                    <i data-lucide="user" class="w-6 h-6"></i>
+                </div>
+                <h2 class="text-3xl font-bold text-slate-900">Sobre mí</h2>
+            </div>
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 text-lg text-slate-600 leading-relaxed space-y-4">
+                <p>
+                    Soy estudiante de <strong>Ingeniería de Sistemas</strong>, cursando actualmente el 8vo ciclo, y cuento con una carrera certificada en <strong>Soporte de Tecnologías de la Información por Google</strong>. Poseo un dominio avanzado de Excel (Macros y Tablas Dinámicas) y un nivel de inglés intermedio.
+                </p>
+                <p>
+                    Me destaco por mi capacidad para <strong>trabajar bajo presión</strong>, manteniéndome muy comprometida con mis obligaciones. Soy una profesional autodidacta, dispuesta siempre a aprender y con una gran capacidad de adaptación a los cambios tecnológicos y organizacionales.
+                </p>
+            </div>
+        </div>
+    </section>
 
-<h1 class="text-5xl font-bold mb-4">
-Estefany Rosario <br>
-<span class="text-primary">Palacios Manrique</span>
-</h1>
+    <!-- Experiencia Section -->
+    <section id="experiencia" class="py-20 px-4 bg-slate-100">
+        <div class="max-w-4xl mx-auto">
+            <div class="flex items-center gap-3 mb-12">
+                <div class="p-3 bg-primary/10 rounded-lg text-primary">
+                    <i data-lucide="briefcase" class="w-6 h-6"></i>
+                </div>
+                <h2 class="text-3xl font-bold text-slate-900">Experiencia Laboral</h2>
+            </div>
 
-<p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-Soporte TI & Data Analyst Junior | Excel Avanzado • Power BI • Gestión y Validación de Datos
-</p>
+            <div class="space-y-8">
+                <!-- Experiencia 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 relative overflow-hidden group hover:border-primary/50 transition-colors">
+                    <div class="absolute top-0 left-0 w-1 h-full bg-primary"></div>
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-900">Asistente de Contabilidad</h3>
+                            <p class="text-primary font-medium">Empresa Privada</p>
+                        </div>
+                        <div class="mt-2 md:mt-0 flex items-center text-sm text-slate-500 bg-slate-50 px-3 py-1 rounded-full w-fit">
+                            <i data-lucide="calendar" class="w-4 h-4 mr-2"></i> 2022 - 2024
+                        </div>
+                    </div>
+                    <ul class="space-y-2 text-slate-600 mt-4">
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-primary/60 shrink-0 mt-0.5"></i>
+                            <span>Gestión y control de activos.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-primary/60 shrink-0 mt-0.5"></i>
+                            <span>Emisión y administración de facturación.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-primary/60 shrink-0 mt-0.5"></i>
+                            <span>Elaboración de conciliación bancaria.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-primary/60 shrink-0 mt-0.5"></i>
+                            <span>Digitalización y archivo de documentación contable.</span>
+                        </li>
+                    </ul>
+                </div>
 
-<div class="flex flex-wrap justify-center gap-4 mb-8">
-<span class="bg-white px-4 py-2 rounded shadow">📧 estefanypalacios9@outlook.com</span>
-<span class="bg-white px-4 py-2 rounded shadow">📱 970666304</span>
-<span class="bg-white px-4 py-2 rounded shadow">📍 Lima, Perú</span>
-</div>
+                <!-- Experiencia 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 relative overflow-hidden group hover:border-primary/50 transition-colors">
+                    <div class="absolute top-0 left-0 w-1 h-full bg-slate-300 group-hover:bg-primary transition-colors"></div>
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-900">Asistente de Jefatura</h3>
+                            <p class="text-primary font-medium">ACM Enterprise Solutions SAC</p>
+                        </div>
+                        <div class="mt-2 md:mt-0 flex items-center text-sm text-slate-500 bg-slate-50 px-3 py-1 rounded-full w-fit">
+                            <i data-lucide="calendar" class="w-4 h-4 mr-2"></i> Enero 2021 - Diciembre 2021
+                        </div>
+                    </div>
+                    <ul class="space-y-2 text-slate-600 mt-4 grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-2">
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="chevron-right" class="w-5 h-5 text-slate-400 shrink-0 mt-0.5"></i>
+                            <span>Manejo de calendario de reuniones (Outlook).</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="chevron-right" class="w-5 h-5 text-slate-400 shrink-0 mt-0.5"></i>
+                            <span>Digitación de documentos y elaboración de cuadros comparativos.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="chevron-right" class="w-5 h-5 text-slate-400 shrink-0 mt-0.5"></i>
+                            <span>Migración de data a sistema web.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="chevron-right" class="w-5 h-5 text-slate-400 shrink-0 mt-0.5"></i>
+                            <span>Pruebas de validación de Información antes de la carga en sistema.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="chevron-right" class="w-5 h-5 text-slate-400 shrink-0 mt-0.5"></i>
+                            <span>Levantamiento de información de proyectos de sistemas para condominios.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i data-lucide="chevron-right" class="w-5 h-5 text-slate-400 shrink-0 mt-0.5"></i>
+                            <span>Carga manual y masiva a sistema desarrollado.</span>
+                        </li>
+                        <li class="flex items-start gap-2 md:col-span-2">
+                            <i data-lucide="chevron-right" class="w-5 h-5 text-slate-400 shrink-0 mt-0.5"></i>
+                            <span>Descarga, digitalización y envío de recibos para propietarios.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<div class="flex justify-center gap-4">
-<a href="cv-estefany.pdf" download class="bg-primary text-white px-6 py-3 rounded-full shadow">
-Descargar CV
-</a>
-<a href="#proyectos" class="border px-6 py-3 rounded-full">
-Ver proyectos
-</a>
-</div>
+    <!-- Educación y Formación -->
+    <section id="educacion" class="py-20 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex items-center gap-3 mb-12 justify-center">
+                <div class="p-3 bg-primary/10 rounded-lg text-primary">
+                    <i data-lucide="graduation-cap" class="w-6 h-6"></i>
+                </div>
+                <h2 class="text-3xl font-bold text-slate-900">Educación y Formación</h2>
+            </div>
 
-</div>
-</section>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Estudios Superiores -->
+                <div>
+                    <h3 class="text-2xl font-bold mb-6 text-slate-800 flex items-center gap-2">
+                        <i data-lucide="book-open" class="w-5 h-5 text-primary"></i> Estudios Superiores
+                    </h3>
+                    <div class="space-y-6">
+                        <!-- UTP -->
+                        <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h4 class="font-bold text-lg text-slate-900">Ingeniería de Sistemas (8vo Ciclo)</h4>
+                                    <p class="text-primary">Universidad Tecnológica del Perú (UTP)</p>
+                                </div>
+                                <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">En curso</span>
+                            </div>
+                        </div>
+                        
+                        <!-- SISE -->
+                        <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h4 class="font-bold text-lg text-slate-900">Computación Informática</h4>
+                                    <p class="text-primary">Instituto Superior SISE</p>
+                                </div>
+                                <span class="text-sm text-slate-500 font-medium">2020 – Actualidad</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-<!-- PERFIL -->
-<section id="perfil" class="py-20 px-4">
-<div class="max-w-4xl mx-auto">
+                <!-- Certificaciones y Especializaciones -->
+                <div>
+                    <h3 class="text-2xl font-bold mb-6 text-slate-800 flex items-center gap-2">
+                        <i data-lucide="award" class="w-5 h-5 text-primary"></i> Certificaciones
+                    </h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4 p-4 bg-slate-50 rounded-lg border border-slate-100">
+                            <div class="bg-white p-2 rounded shadow-sm shrink-0">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="Google Logo" class="w-6 h-6">
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Soporte de Tecnologías de la Información</h4>
+                                <p class="text-sm text-slate-600">Certificado Profesional Google (Coursera)</p>
+                            </div>
+                        </div>
 
-<h2 class="text-3xl font-bold mb-6">Sobre mí</h2>
+                        <div class="flex items-start gap-4 p-4 bg-slate-50 rounded-lg border border-slate-100">
+                            <div class="bg-green-100 p-2 rounded shadow-sm shrink-0 text-green-600">
+                                <i data-lucide="file-spreadsheet" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Excel Básico, Intermedio y Avanzado</h4>
+                                <p class="text-sm text-slate-600">Sistemas UNI | Incluye Tablas Dinámicas y Macros</p>
+                            </div>
+                        </div>
 
-<div class="bg-white p-8 rounded-xl shadow space-y-4">
+                        <div class="flex items-start gap-4 p-4 bg-slate-50 rounded-lg border border-slate-100">
+                            <div class="bg-indigo-100 p-2 rounded shadow-sm shrink-0 text-indigo-600">
+                                <i data-lucide="languages" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Inglés Intermedio</h4>
+                                <p class="text-sm text-slate-600">Cursos libres / Autodidacta</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-<p>
-Soy estudiante de Ingeniería de Sistemas con certificación en Soporte de Tecnologías de la Información por Google, con experiencia en gestión, validación y análisis de datos en entornos empresariales.
-</p>
+            <!-- Educación Escolar (Oculto en móvil por default, visible en md) -->
+            <div class="mt-12 pt-8 border-t border-slate-200">
+                <h3 class="text-lg font-bold mb-4 text-slate-700">Educación Escolar</h3>
+                <div class="flex flex-wrap gap-4 text-sm text-slate-600">
+                    <span class="bg-white px-4 py-2 rounded border border-slate-200">Colegio Privado Mi Amigo Jesus (2006-2013)</span>
+                    <span class="bg-white px-4 py-2 rounded border border-slate-200">Colegio San Alfonso María de Ligorio (2014-2017)</span>
+                    <span class="bg-white px-4 py-2 rounded border border-slate-200">Colegio Pamer (2018)</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<p>
-Me especializo en Excel avanzado (macros, tablas dinámicas) y tengo conocimientos en Power BI, creando dashboards que ayudan a mejorar la toma de decisiones.
-</p>
+    <!-- Competencias -->
+    <section id="habilidades" class="py-20 px-4 bg-slate-900 text-white">
+        <div class="max-w-4xl mx-auto">
+            <div class="flex flex-col items-center text-center mb-12">
+                <div class="p-3 bg-white/10 rounded-lg text-white mb-4">
+                    <i data-lucide="cpu" class="w-6 h-6"></i>
+                </div>
+                <h2 class="text-3xl font-bold">Competencias Técnicas</h2>
+                <p class="text-slate-400 mt-2">Herramientas, conocimientos y sistemas operativos</p>
+            </div>
 
-<p>
-He trabajado en migración de datos, pruebas de validación y soporte en sistemas, asegurando la calidad e integridad de la información.
-</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Sistemas Operativos -->
+                <div class="bg-white/5 border border-white/10 p-6 rounded-xl hover:bg-white/10 transition-colors">
+                    <i data-lucide="monitor" class="w-8 h-8 text-blue-400 mb-4"></i>
+                    <h3 class="font-bold text-lg mb-2">Sistemas Operativos</h3>
+                    <p class="text-slate-300 text-sm">Microsoft Windows XP, 7, 8, 10.</p>
+                </div>
 
-<p>
-Soy autodidacta, analítica y orientada a resultados, con capacidad de adaptación a nuevos entornos tecnológicos.
-</p>
+                <!-- Soporte Técnico -->
+                <div class="bg-white/5 border border-white/10 p-6 rounded-xl hover:bg-white/10 transition-colors">
+                    <i data-lucide="wrench" class="w-8 h-8 text-blue-400 mb-4"></i>
+                    <h3 class="font-bold text-lg mb-2">Soporte Técnico</h3>
+                    <p class="text-slate-300 text-sm">Aspectos básicos de asistencia técnica en TI.</p>
+                </div>
 
-</div>
-</div>
-</section>
+                <!-- Programación -->
+                <div class="bg-white/5 border border-white/10 p-6 rounded-xl hover:bg-white/10 transition-colors">
+                    <i data-lucide="code-2" class="w-8 h-8 text-blue-400 mb-4"></i>
+                    <h3 class="font-bold text-lg mb-2">Programación y Algoritmia</h3>
+                    <p class="text-slate-300 text-sm">Conocimiento de programación básica. Algoritmo y estructura de datos (básico y avanzado).</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- EXPERIENCIA -->
-<section id="experiencia" class="bg-gray-100 py-20 px-4">
-<div class="max-w-4xl mx-auto">
+    <!-- Referencias y Footer -->
+    <footer id="contacto" class="bg-slate-50 border-t border-slate-200 pt-16 pb-8 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 mb-12">
+                
+                <!-- Contacto Rápido -->
+                <div>
+                    <h2 class="text-2xl font-bold text-slate-900 mb-4">Estemos en contacto</h2>
+                    <p class="text-slate-600 mb-4">¿Buscas un perfil enfocado en soluciones tecnológicas y de datos?</p>
+                    <a href="mailto:estefanypalacios9@outlook.com" class="inline-flex items-center gap-2 bg-primary text-white px-6 py-2 rounded-lg hover:bg-secondary transition-colors font-medium">
+                        <i data-lucide="send" class="w-4 h-4"></i> Enviar correo
+                    </a>
+                </div>
 
-<h2 class="text-3xl font-bold mb-10">Experiencia</h2>
+                <!-- Referencias -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 w-full md:w-auto">
+                    <h3 class="text-sm font-bold text-slate-400 uppercase tracking-wider mb-3">Referencias Laborales</h3>
+                    <div>
+                        <p class="font-bold text-slate-800">Jose Antonio Huayon</p>
+                        <p class="text-sm text-slate-600">Jefe de Operaciones | ACM Enterprise Solutions SAC</p>
+                        <p class="text-sm text-primary font-medium mt-1 flex items-center gap-1">
+                            <i data-lucide="phone-call" class="w-3 h-3"></i> 949 375 979
+                        </p>
+                    </div>
+                </div>
 
-<div class="bg-white p-6 rounded-xl shadow mb-6">
-<h3 class="font-bold text-lg">Asistente de Contabilidad</h3>
-<p class="text-gray-500">2022 - 2024</p>
-<ul class="mt-3 list-disc ml-5 space-y-1">
-<li>Facturación y conciliación bancaria</li>
-<li>Gestión de activos</li>
-<li>Digitalización de documentos</li>
-<li>Organización de información financiera</li>
-</ul>
-</div>
+            </div>
+            
+            <div class="text-center text-slate-500 text-sm pt-8 border-t border-slate-200">
+                <p>&copy; 2026 Estefany Rosario Palacios Manrique. Todos los derechos reservados.</p>
+                <p class="mt-2 text-xs">Desarrollado con HTML, Tailwind CSS y Lucide Icons.</p>
+            </div>
+        </div>
+    </footer>
 
-<div class="bg-white p-6 rounded-xl shadow">
-<h3 class="font-bold text-lg">Asistente de Jefatura</h3>
-<p class="text-gray-500">2021</p>
-<ul class="mt-3 list-disc ml-5 space-y-1">
-<li>Migración de datos a sistemas web</li>
-<li>Validación de información antes de carga</li>
-<li>Soporte en procesos administrativos</li>
-<li>Elaboración de reportes</li>
-</ul>
-</div>
-
-</div>
-</section>
-
-<!-- PROYECTOS -->
-<section id="proyectos" class="py-20 px-4">
-<div class="max-w-4xl mx-auto">
-
-<h2 class="text-3xl font-bold mb-10">Proyectos</h2>
-
-<div class="grid md:grid-cols-2 gap-6">
-
-<div class="bg-white p-6 rounded-xl shadow">
-<h3 class="font-bold text-lg">Dashboard de Ventas en Power BI</h3>
-<p class="text-gray-600 mt-2">
-Creación de dashboard interactivo con KPIs, análisis de tendencias y visualización de datos.
-</p>
-<span class="text-primary text-sm">Power BI • Excel</span>
-</div>
-
-<div class="bg-white p-6 rounded-xl shadow">
-<h3 class="font-bold text-lg">Limpieza y Validación de Datos</h3>
-<p class="text-gray-600 mt-2">
-Procesamiento de datos para asegurar calidad antes de su análisis.
-</p>
-<span class="text-primary text-sm">Excel • Data Cleaning</span>
-</div>
-
-<div class="bg-white p-6 rounded-xl shadow">
-<h3 class="font-bold text-lg">Migración de Información</h3>
-<p class="text-gray-600 mt-2">
-Carga masiva de datos en sistema web con validación previa.
-</p>
-<span class="text-primary text-sm">Testing • Sistemas</span>
-</div>
-
-<div class="bg-white p-6 rounded-xl shadow">
-<h3 class="font-bold text-lg">Automatización en Excel</h3>
-<p class="text-gray-600 mt-2">
-Uso de macros y tablas dinámicas para optimizar procesos repetitivos.
-</p>
-<span class="text-primary text-sm">Excel Avanzado</span>
-</div>
-
-</div>
-</div>
-</section>
-
-<!-- HABILIDADES -->
-<section id="habilidades" class="bg-slate-900 text-white py-20 px-4">
-<div class="max-w-4xl mx-auto text-center">
-
-<h2 class="text-3xl font-bold mb-10">Habilidades</h2>
-
-<div class="grid md:grid-cols-3 gap-6">
-
-<div class="bg-white/10 p-6 rounded-xl">Excel Avanzado</div>
-<div class="bg-white/10 p-6 rounded-xl">Power BI</div>
-<div class="bg-white/10 p-6 rounded-xl">Soporte TI</div>
-<div class="bg-white/10 p-6 rounded-xl">Análisis de Datos</div>
-<div class="bg-white/10 p-6 rounded-xl">Testing</div>
-<div class="bg-white/10 p-6 rounded-xl">Programación </div>
-
-</div>
-
-</div>
-</section>
-
-<!-- CONTACTO -->
-<footer class="py-16 text-center">
-<h2 class="text-2xl font-bold mb-4">Contáctame</h2>
-<p>📧 estefanypalaciosmanrique9@gmail.com</p>
-<p class="text-gray-500 mt-2">Disponible para prácticas y oportunidades en Data & TI</p>
-</footer>
-
-<script>
+    <!-- Script para inicializar Lucide Icons -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
 lucide.createIcons();
 </script>
 
